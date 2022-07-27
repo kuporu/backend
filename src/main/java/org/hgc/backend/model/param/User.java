@@ -2,6 +2,7 @@ package org.hgc.backend.model.param;
 
 import lombok.Data;
 import org.hgc.backend.valid.AddGroup;
+import org.hgc.backend.valid.ListValue;
 import org.hgc.backend.valid.UpdateGroup;
 
 import javax.validation.constraints.Email;
@@ -18,7 +19,8 @@ public class User {
      */
     @Null(message = "新增状态下，id为空", groups = {AddGroup.class})
     @NotNull(message = "修改状态下，id不为空", groups = {UpdateGroup.class})
-    private Long id;
+    @ListValue(value = {1,2,3}, groups = {UpdateGroup.class})
+    private Integer id;
 
     /**
      * 用户账号

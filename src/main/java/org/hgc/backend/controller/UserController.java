@@ -48,7 +48,7 @@ public class UserController {
     @GetMapping("/getUser")
     public User getUser() {
         User user = new User();
-        user.setId(1L);
+        user.setId(1);
         user.setAccount("12345678");
         user.setPassword("12345678");
         user.setEmail("123@qq.com");
