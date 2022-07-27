@@ -30,4 +30,9 @@ public class UserServiceImpl implements UserService {
         // 参数校验完毕后这里就写上业务逻辑
         return "success";
     }
+
+    @Override
+    public String updateUser(User user) {
+        return "success";
+    }
 }
